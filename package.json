@@ -6,6 +6,10 @@
   "typings": "./dist/index.d.ts",
   "author": "Daniel Le <thanhlcm90@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "thanhlcm90/pbac-validator"
+  },
   "scripts": {
     "test": "jest",
     "lint": "eslint \"{src,test}/**/*.ts\" --fix",
@@ -33,8 +37,6 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@commitlint/cli": "13.1.0",
-    "@commitlint/config-conventional": "13.1.0",
     "@types/jest": "26.0.24",
     "@types/node": "14.17.5",
     "@typescript-eslint/eslint-plugin": "2.21.0",
@@ -51,11 +53,6 @@
     "publish-please": "5.5.1",
     "ts-jest": "27.0.4",
     "typescript": "4.4.3"
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
   },
   "jest": {
     "moduleFileExtensions": [
