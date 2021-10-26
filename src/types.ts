@@ -1,7 +1,5 @@
-export type StatementEffect = 'allow' | 'deny';
-
 export type PBACStatement = {
-  effect: StatementEffect;
+  effect: string;
   actions: string[];
   resources: string[];
 };
