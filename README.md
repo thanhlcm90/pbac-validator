@@ -1,4 +1,4 @@
-[![npm](http://img.shields.io/npm/v/pbac-validator.svg?style=flat-square)](https://npmjs.org/package/pbac-validator) [![npm](http://img.shields.io/npm/dm/pbac-validator.svg?style=flat-square)](https://npmjs.org/package/pbac-validator) [![Build Status](https://img.shields.io/travis/thanhlcm90/pbac-validator/master.svg?style=flat-square)](https://travis-ci.org/thanhlcm90/pbac-validator) ![license](https://img.shields.io/badge/license-mit-blue.svg?style=flat-square)
+[![npm](http://img.shields.io/npm/v/pbac-validator.svg?style=flat-square)](https://npmjs.org/package/pbac-validator) [![npm](http://img.shields.io/npm/dm/pbac-validator.svg?style=flat-square)](https://npmjs.org/package/pbac-validator) [![Build Status](https://img.shields.io/travis/thanhlcm90/pbac-validator/master.svg?style=flat-square)](https://app.travis-ci.com/github/thanhlcm90/pbac-validator) ![license](https://img.shields.io/badge/license-mit-blue.svg?style=flat-square)
 
 # Policy Based Access Control
 

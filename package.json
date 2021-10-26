@@ -8,7 +8,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "thanhlcm90/pbac-validator"
+    "url": "https://github.com/thanhlcm90/pbac-validator"
+  },
+  "engines": {
+    "node": ">=12"
   },
   "scripts": {
     "test": "jest",
