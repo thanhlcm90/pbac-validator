@@ -125,7 +125,8 @@ export class PBAC {
     let r = false;
 
     this._statements.forEach((statement) => {
-      const matchResource = statement.resources && this.evaluateResource(statement.resources, permission.resource);
+      const matchResource =
+        statement.resources && this.evaluateResource(statement.resources, permission.resource, permission.context);
       const matchAction = statement.actions && this.evaluateAction(statement.actions, permission.action);
       if (matchResource && matchAction) {
         r = statement.effect === 'allow';
@@ -154,11 +155,28 @@ export class PBAC {
     return this._statements;
   }
 
+  private interpolateValue(value: string, variables?: Record<string, Record<string, string>>): string {
+    return value.replace(/\${(.+?)}/g, (match, variable) => this.getVariableValue(variable, variables));
+  }
+
+  private getVariableValue(variable: string, variables?: Record<string, Record<string, string>>): string {
+    const parts = variable.split(':');
+    if (variables?.[parts[0]] && variables[parts[0]][parts[1]] !== undefined) return variables[parts[0]][parts[1]];
+    return variable;
+  }
+
   private evaluateAction(actions: string[], reference: string): string | undefined {
     return actions.find((action) => StringLike.call(this, reference, action));
   }
 
-  private evaluateResource(resources: string[], reference: string): string | undefined {
-    return resources.find((resource) => StringLike.call(this, reference, resource));
+  private evaluateResource(
+    resources: string[],
+    reference: string,
+    context?: Record<string, Record<string, string>>
+  ): string | undefined {
+    return resources.find((resource) => {
+      const value = this.interpolateValue(resource, context);
+      return StringLike.call(this, reference, value);
+    });
   }
 }

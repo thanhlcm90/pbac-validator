@@ -15,4 +15,5 @@ export type PBACFunction = {
 export type PermissionCheck = {
   action: string;
   resource: string;
+  context?: Record<string, Record<string, string>>;
 };
