@@ -9,7 +9,8 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint \"{src,test}/**/*.ts\" --fix",
-    "build": "tsc",
+    "prebuild": "rimraf dist",
+    "build": "tsc -p tsconfig.build.json",
     "publish-please": "publish-please",
     "prepublish": "publish-please guard",
     "husky": "husky install"

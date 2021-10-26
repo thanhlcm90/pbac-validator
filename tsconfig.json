@@ -14,7 +14,6 @@
     "esModuleInterop": true,
     "moduleResolution": "node",
     "strictPropertyInitialization": false,
-    "typeRoots": ["./node_modules/@types"],
-    "outDir": "./dist"
+    "typeRoots": ["./node_modules/@types"]
   }
 }
