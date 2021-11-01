@@ -12,20 +12,17 @@ Use the power and flexibility of the AWS IAM Policy syntax in your own applicati
 npm install pbac-validator
 ```
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 Contents
 
-- [Synopsis](#synopsis)
+- [Statements](#statements)
 - [Constructor](#constructor)
   - [Properties](#properties)
 - [Methods](#methods)
   - [evaluate(params)](#evaluateparams)
-  - [validate(policy)](#validatepolicy)
+  - [evaluateMulti(params)](#evaluatemultiparams)
+  - [addFromFunctionMatrix(params)](#addfromfunctionmatrixparams)
 - [Reference](#reference)
   - [Context](#context)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Statements
 
